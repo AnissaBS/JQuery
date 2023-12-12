@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Document</title>
+    <style>
+        p{
+            width: 150px;
+            border:1px dotted black;
+            padding: 10px;
+            margin-bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+   <!-- <p>
+    <a href="">Lien 1</a>
+    <a href="">Lien 2</a>
+    <a href="">Lien 3</a>
+   </p>
+  <p><a href="">Lien 1</a></p>
+  <p><a href="">lien 1</a>
+    <a href="">lien 2</a>
+  </p> -->
+  
+  <p>Quels librairies JS</p>
+  <p>Dynamiser les sites web</p>
+  <p>La syntaxe JQuery <a href="#">Lien</a></p>
+   
+
+    <script>
+        $(document).ready(function(){
+            // $("p a:only-child").css("background", "#9cf");
+            $("p:contains(JS)").css("background", "#9cf");// cible les balises p ayant la chaine de caracteres "JS"
+            $("p:has(a)").css("background", "lightblue");//cible les balises p comportant un lien hypertexte.
+        });
+    </script>
+</body>
+</html>
