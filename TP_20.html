@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Changer d'image au click sur le lien</title>
+    <style>
+        a {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <p><a href="#">Sans style</a></p>
+    <div style = "background-color: #9cf;
+    border : 2px solid black;
+    font-weight: bold;" > 
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum iste animi ratione ullam ipsam eveniet, officiis facere sed id! Recusandae modi placeat iste ipsa quos sint voluptas nulla, aliquam provident.
+    </div>
+
+
+    <script>
+        $(document).ready(function(){
+            $("a").click(function() {
+                $("div").removeAttr("style");
+            });
+        });
+    </script>
+</body>
+</html>
