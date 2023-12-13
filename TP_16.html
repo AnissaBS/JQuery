@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Document</title>
+    <style>
+        a {
+            color: black;
+        }
+
+        div {
+            width: 255px;
+            padding: 3px;
+            border: 1px solid black;
+        }
+
+        .cacher {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <p><a href="#">Afficher / Masquer</a></p>
+    <div>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam placeat et ab perferendis, impedit voluptatibus quae consequatur adipisci quasi voluptates! Veritatis sint cumque ab, rem reprehenderit officia labore pariatur optio.
+    </div>
+    <p>Suite de la page...</p>
+
+    <script>
+        $(document).ready(function() {
+            $("a").click(function() {
+                $("div").toggleClass("cacher");
+            });
+        });
+    </script>
+</body>
+</html>
