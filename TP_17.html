@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Document</title>
+    <style>
+        div {
+            width: 150px;
+            height: 18px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+  
+    <p><button>Afficher le style CSS</button></p>
+    <p>
+        Jquery est un framework
+    <span style = "font-style: italic">JavaScript</span> libre
+    </p>
+
+    <p>Le style CSS de l'élément&lt; span&gt; est</p>
+    <div></div>
+
+    <script>
+        $(document).ready(function(){
+            $("button").click(function() {
+                var style_css = $("span").attr("style");
+                $("div").text(style_css)
+            });
+        });
+    </script>
+</body>
+</html>
