@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Document</title>
+    <style>
+        .hidden{
+            display: none;
+        }
+        div{
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+            float: left;
+            border: 1px solid black;
+
+        }
+    </style>
+</head>
+<body>
+    <p><button>Montrer les boites &lt;div&gt;cachées</button></p>
+    <div class="box">&nbsp;</div>
+    <div class="hidden">&nbsp;</div>
+    <div class="hidden">&nbsp;</div>
+    <div class="hidden">&nbsp;</div>
+    <div class="box">&nbsp;</div>
+
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+            $("div:hidden").css("background", "#9cf").show();
+        });
+    })
+    </script>
+</body>
+</html>
