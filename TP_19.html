@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Document</title>
+    <style>
+        a {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <p><a href="#">Image suivante</a></p>
+    <div><img src="Ressources/fleur1.jpg" alt="Fleur 1"></div>
+
+
+    <script>
+        $(document).ready(function(){
+            $("a").click(function() {
+                $("img").attr({
+                    src: "Ressources/fleur5.jpg",
+                    alt: "Fleur 2",
+                    title:"Nature",
+                });
+            });
+        });
+    </script>
+</body>
+</html>
