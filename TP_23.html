@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Afficher le choix</title> 
+    <style>
+        a {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" checked="checked">
+    <p>&nbsp;</p>
+
+    <script>
+        $(document).ready(function(){
+            $("input").change(function() {
+                var $input = $(this);
+                $("p").html(
+                    "<b>Attribut</b> .attr(\"checked\") : <b>"
+                        +$input.attr("checked") + "</b>.<br>" + "<b>Propriété</b> . prop(\"checked\") : <b>"
+                        + $input.prop("checked") + "</b>"
+                );
+            });
+        });
+    </script>
+</body>
+</html>
